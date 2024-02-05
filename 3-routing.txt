@@ -1,0 +1,57 @@
+const url = require("url") // http server
+
+///////////////////////////////////////////////
+//Files
+const server = http.createServer((req,res)=>{
+    console.log(req.url)
+    res.end('hello frpm server ')
+})
+
+/product  -> req.url
+/favicon.ico   - > website icon
+
+
+
+///////////////
+// routing in node 
+
+
+const server = http.createServer((req,res)=>{
+    console.log(req.url)
+
+    const pathName = req.url
+
+    if(pathName === '/overview'){
+        res.end('this is over view')
+    }
+    else if(pathName==='/products'){
+        res.end('this is product page')
+    }
+    // res.end('hello frpm server ')
+})
+
+
+
+/////////////////
+// status and html and my own header
+
+   }
+    else{
+        res.writeHead(404 ,{
+            'content-type':'text/html',
+            'my-own-header':'hello-world'
+
+        })
+        res.end('<h1>age is not found</h1>')
+    }
+
+
+
+
+
+
+
+
+
+
+
